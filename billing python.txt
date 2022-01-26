@@ -1,0 +1,29 @@
+def bill():
+     con=True
+     p=0
+     c1=0
+     f=open("bill.txt","a")
+     while con==True:
+         item=input("type in the item")
+         price=input("type in the price")
+         p=p+int(price)
+         c1=c1+1
+         b=item+"="+price
+         f.write(b+"\n")
+         al=input("if the list is done, type yes,else no")
+         if al=="no":
+             con==True
+         else:
+             con==False
+             break
+     delivery=c1* 5
+     d="delivery="+str(delivery)
+     total= p+(c1*5)
+     t="total="+ str(total)
+     f.write(d+"\n")
+     f.write(t+"\n")
+     
+     f.close
+bill()
+        
+
